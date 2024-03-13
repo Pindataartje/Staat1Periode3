@@ -447,7 +447,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eefd7c4d48f66274fb46cf9e12eea309,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eefd7c4d48f66274fb46cf9e12eea309,
         type: 3}
@@ -457,7 +457,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eefd7c4d48f66274fb46cf9e12eea309,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6
+      value: 4.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eefd7c4d48f66274fb46cf9e12eea309,
         type: 3}
@@ -605,6 +605,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 292726052}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &294100589
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.88
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a9eb4e31c90809742ae9315cacbd6814,
+        type: 3}
+      propertyPath: m_Name
+      value: HotelMuurHoekBuiten 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9eb4e31c90809742ae9315cacbd6814, type: 3}
 --- !u!1001 &321387026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -922,6 +990,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f788153447d512a47b52a3d91c7ef0c9, type: 3}
+--- !u!1001 &507473631
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b5526b8f1225d4d4bb2ef430201805e7, type: 2}
+    - target: {fileID: 919132149155446097, guid: b254ce1e763c7a74daabd389e6fb8c84,
+        type: 3}
+      propertyPath: m_Name
+      value: HotelMuurHoekBinnen
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b254ce1e763c7a74daabd389e6fb8c84, type: 3}
 --- !u!1001 &540773159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1362,6 +1503,84 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &887025720
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e0d9ea8879094f42aac98eb151173d5, type: 2}
+    - target: {fileID: 919132149155446097, guid: 931c9d05713707c49aae4e0227f7a987,
+        type: 3}
+      propertyPath: m_Name
+      value: HotelMuurRecht (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 931c9d05713707c49aae4e0227f7a987, type: 3}
 --- !u!1001 &939925027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2436,6 +2655,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f788153447d512a47b52a3d91c7ef0c9, type: 3}
+--- !u!1001 &1997496695
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41ceb99acfb08574fb8240348c9c59b8, type: 2}
+    - target: {fileID: 919132149155446097, guid: c8a21319b466f3f458c8f09536507a82,
+        type: 3}
+      propertyPath: m_Name
+      value: HotelMuurHoekBuiten (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8a21319b466f3f458c8f09536507a82, type: 3}
 --- !u!1001 &2083989514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2636,6 +2928,10 @@ SceneRoots:
   - {fileID: 1471701651}
   - {fileID: 292726052}
   - {fileID: 409188275}
+  - {fileID: 887025720}
   - {fileID: 197995618}
   - {fileID: 192190531}
   - {fileID: 17394046}
+  - {fileID: 294100589}
+  - {fileID: 1997496695}
+  - {fileID: 507473631}
