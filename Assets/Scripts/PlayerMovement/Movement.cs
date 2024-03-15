@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -8,30 +6,58 @@ public class Movement : MonoBehaviour
     public float hor;
     public Vector3 lopen;
     public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        // Set the player GameObject reference when the script starts
+        SetPlayerObjectReference();
     }
 
     // Update is called once per frame
     void Update()
     {
-        hor = Input.GetAxis("Horizontal"); // Hier koppelen we de hor float voor horizontale beweging aan de input van de horizontale keys (A D etc)
-        vert = Input.GetAxis("Vertical"); // Hier koppelen we de hor float voor horizontale beweging aan de input van de horizontale keys (W S etc)
-        lopen.x = hor; //Hier koppelen we de X as van de vector 3 aan de hor float waardoor het nieuwe informatie kan ontvangen van de hor float
-        lopen.z = vert; //Hier koppelen we de Z as van de vector 3 aan de vert float
+        hor = Input.GetAxis("Horizontal");
+        vert = Input.GetAxis("Vertical");
+        lopen.x = hor;
+        lopen.z = vert;
 
         transform.Translate(lopen * speed * Time.deltaTime);
-        //Hiermee verplaatsen we het object op basis van de vector 3 * de speed * Time.deltaTime
-
     }
+
     private void OnCollisionEnter(Collision infoAboutWhatIHit)
     {
-        //Collision aangemaakt met n naam, Als iets collide met een object met de tag "MovingBlock" dan print hij Boem in de console
         if (infoAboutWhatIHit.gameObject.tag == "MovingBlock")
         {
             print("Boem");
+        }
+    }
+
+    // Method to set the player GameObject reference
+    private void SetPlayerObjectReference()
+    {
+        // Find the player GameObject in the scene and store its reference
+        GameObject playerGameObject = GameObject.FindGameObjectWithTag("Player");
+
+        // Check if the player GameObject reference is valid
+        if (playerGameObject != null)
+        {
+            // Get a reference to the PersistentManager
+            PersistentManager persistentManager = FindObjectOfType<PersistentManager>();
+
+            // Set the player GameObject reference in the PersistentManager
+            if (persistentManager != null)
+            {
+                persistentManager.SetPlayerObject(playerGameObject);
+            }
+            else
+            {
+                Debug.LogWarning("PersistentManager not found in the scene.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Player GameObject not found in the scene.");
         }
     }
 }
