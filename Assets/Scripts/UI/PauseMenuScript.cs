@@ -9,11 +9,13 @@ public class PauseMenuScript : MonoBehaviour
     private bool isPaused = false;
     public string mainMenuSceneName = "MainMenu";
 
-
     void Start()
     {
         // Ensure the pause menu canvas is initially deactivated
         pauseMenuCanvas.SetActive(false);
+
+        // Ensure the time scale is set to 1 when the game starts
+        Time.timeScale = 1f;
 
         // Check if the game is not initially paused
         if (!isPaused)
