@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovementVER : MonoBehaviour
+public class CameraVert: MonoBehaviour
 {
+    public float sensitivity = 100.0f; // Sensitivity for mouse movement
 
     void Update()
     {
-        Vector3 curEuler = transform.eulerAngles; //Dit pakt de huidige Euler-rotatie op van het GameObject
-                                                  //Daarna slaat het die informatie op in een Vector3 genaamd curEuler
-        curEuler.x -= Input.GetAxis("Mouse Y"); // Hiermee koppel je de X as van de vector 3 aan de input van de verticale muis beweging
-        curEuler.x = ClampAngle(curEuler.x, -90, 90); //Hiermee beperk (Clamp) je de verticale rotatie tussen 90 en -90 graden
-        transform.eulerAngles = curEuler; //Deze regel past de opgeslagen informatie/rotatie uit de vector 3 toe op de transform.eulerangles
-                                          // Waardoor hij roteert                                         
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+
+        Vector3 curEuler = transform.eulerAngles;
+        curEuler.x -= mouseY;
+        curEuler.x = ClampAngle(curEuler.x, -90, 90);
+        transform.eulerAngles = curEuler;
     }
 
     static float ClampAngle(float angle, float min, float max)
