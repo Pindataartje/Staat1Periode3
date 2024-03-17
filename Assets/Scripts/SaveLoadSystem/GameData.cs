@@ -15,6 +15,8 @@ public class GameData
         this.rotation = new float[] { rotation.x, rotation.y, rotation.z, rotation.w };
     }
 
+    public GameObject gameObject { get; internal set; }
+
     public Vector3 GetPosition()
     {
         return new Vector3(position[0], position[1], position[2]);
