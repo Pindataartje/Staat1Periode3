@@ -4,27 +4,29 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+    // Referentie naar SaveLoadManager
     public SaveLoadManager saveLoadManager;
 
+    // Vind SaveLoadManager instantie
     void Start()
     {
-        // Find the SaveLoadManager instance in the scene
         saveLoadManager = FindObjectOfType<SaveLoadManager>();
-
+        // Print foutmelding als SaveLoadManager niet gevonden is
         if (saveLoadManager == null)
         {
-            Debug.LogError("Checkpoint: SaveLoadManager not found in the scene.");
+            Debug.LogError("Checkpoint: SaveLoadManager niet gevonden in de scène.");
         }
     }
 
+    // Wordt aangeroepen wanneer speler de checkpoint-zone betreedt
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            // Sla speler data op
             SavePlayerData(other.transform.position, other.transform.rotation);
         }
     }
-
     void SavePlayerData(Vector3 position, Quaternion rotation)
     {
         Debug.Log("Saving player data: Position=" + position + ", Rotation=" + rotation);

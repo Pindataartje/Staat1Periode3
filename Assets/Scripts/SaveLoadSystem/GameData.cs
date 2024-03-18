@@ -1,31 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
 public class GameData
 {
+    // Positie van de speler
+    public Vector3 position;
+    // Rotatie van de speler
+    public Quaternion rotation;
 
-    public float[] position;
-    public float[] rotation;
-
+    // Constructor om speler data te initialiseren
     public GameData(Vector3 position, Quaternion rotation)
     {
-        this.position = new float[] { position.x, position.y, position.z };
-        this.rotation = new float[] { rotation.x, rotation.y, rotation.z, rotation.w };
+        this.position = position;
+        this.rotation = rotation;
     }
-
-    public GameObject gameObject { get; internal set; }
-
-    public Vector3 GetPosition()
-    {
-        return new Vector3(position[0], position[1], position[2]);
-    }
-
-    public Quaternion GetRotation()
-    {
-        return new Quaternion(rotation[0], rotation[1], rotation[2], rotation[3]);
-    }
-
-
 }

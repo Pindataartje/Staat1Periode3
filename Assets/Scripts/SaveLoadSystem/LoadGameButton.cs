@@ -3,46 +3,44 @@ using UnityEngine.SceneManagement;
 
 public class LoadGameButton : MonoBehaviour
 {
-    public string gameSceneName = "YourGameSceneNameHere";
+    // Naam van de scène om te laden
+    public string gameSceneName = "JeSpelScèneNaamHier";
 
+    // Functie om het opgeslagen spel en de scène te laden
     public void LoadSavedGameAndScene()
     {
-        // Load the saved player data
+        // Laad de opgeslagen speler data
         GameData savedGameData = SaveLoadManager.Instance.LoadPlayerData();
 
+        // Controleer of opgeslagen speler data bestaat
         if (savedGameData != null)
         {
-            Debug.Log("Loaded player data: Position=" + savedGameData.GetPosition() + ", Rotation=" + savedGameData.GetRotation());
+            // Print geladen speler data naar console
+            Debug.Log("Geladen speler data: Positie=" + savedGameData.position + ", Rotatie=" + savedGameData.rotation);
 
-            // Load the game scene asynchronously
+            // Laad de spelscène asynchroon
             SceneManager.LoadSceneAsync(gameSceneName).completed += (operation) =>
             {
-                // Set the player's position and rotation based on the loaded data
-                SetPlayerPositionAndRotation(savedGameData.GetPosition(), savedGameData.GetRotation());
+                // Stel de positie en rotatie van de speler in op basis van de geladen data
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                {
+                    player.transform.position = savedGameData.position;
+                    player.transform.rotation = savedGameData.rotation;
+                }
+                else
+                {
+                    Debug.LogError("LoadGameButton: Speler GameObject niet gevonden in de geladen scène.");
+                }
 
-                Debug.Log("Game loaded successfully.");
+                // Print succesbericht naar console
+                Debug.Log("Spel succesvol geladen.");
             };
         }
         else
         {
-            Debug.LogWarning("Failed to load game: No saved data found.");
-        }
-    }
-
-    private void SetPlayerPositionAndRotation(Vector3 position, Quaternion rotation)
-    {
-        // Find the player GameObject in the loaded scene
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-        // Ensure that the player GameObject is not null before setting its position and rotation
-        if (player != null)
-        {
-            player.transform.position = position;
-            player.transform.rotation = rotation;
-        }
-        else
-        {
-            Debug.LogError("LoadGameButton: Player GameObject not found in the loaded scene.");
+            // Print waarschuwing als er geen opgeslagen data gevonden is
+            Debug.LogWarning("Kon spel niet laden: Geen opgeslagen data gevonden.");
         }
     }
 }
