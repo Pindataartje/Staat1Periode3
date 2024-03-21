@@ -10,7 +10,7 @@ public class Checkpoint : MonoBehaviour
     // Vind SaveLoadManager instantie
     void Start()
     {
-        saveLoadManager = FindObjectOfType<SaveLoadManager>();
+        saveLoadManager = Object.FindFirstObjectByType<SaveLoadManager>();
         // Print foutmelding als SaveLoadManager niet gevonden is
         if (saveLoadManager == null)
         {

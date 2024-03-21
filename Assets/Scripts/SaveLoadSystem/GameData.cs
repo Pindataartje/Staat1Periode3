@@ -3,15 +3,15 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    // Positie van de speler
+    // Player position
     public Vector3 position;
-    // Rotatie van de speler
+    // Player rotation
     public Quaternion rotation;
 
-    // Constructor om speler data te initialiseren
-    public GameData(Vector3 position, Quaternion rotation)
+    // Constructor to initialize player data
+    public GameData(Vector3 playerPosition, Quaternion playerRotation)
     {
-        this.position = position;
-        this.rotation = rotation;
+        position = playerPosition; // Assigning method parameter to class field without 'this.'
+        rotation = playerRotation; // Assigning method parameter to class field without 'this.'
     }
 }
