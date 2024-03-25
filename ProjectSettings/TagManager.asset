@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Note
   - Light
+  - Gang
+  - Kamer
   layers:
   - Default
   - TransparentFX
