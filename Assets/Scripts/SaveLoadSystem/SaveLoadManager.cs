@@ -14,7 +14,7 @@ public class SaveLoadManager : MonoBehaviour
             // Als de instantie null is, zoek een bestaande instantie of maak een nieuwe aan
             if (instance == null)
             {
-                instance = FindObjectOfType<SaveLoadManager>();
+                instance = Object.FindFirstObjectByType<SaveLoadManager>();
                 if (instance == null)
                 {
                     GameObject singletonObject = new GameObject("SaveLoadManager");
