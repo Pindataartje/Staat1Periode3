@@ -10,28 +10,39 @@ public class Movement : MonoBehaviour
     public bool isCrouching = false; // Flag to track crouch state
     public float standingHeight = 1.0f; // Original height of the player
     public float crouchingHeight = 0.5f; // Height of the player when crouching
+    public float standingCheckDistance = 0.2f; // Distance to check for obstacles when standing up
+    private CapsuleCollider playerCollider; // Reference to the player's collider
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        // Get reference to the player's collider
+        playerCollider = GetComponent<CapsuleCollider>();
+        // Ensure the collider is not null
+        if (playerCollider == null)
+        {
+            Debug.LogError("Player Collider is missing!");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Check for crouch input
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !isCrouching)
         {
-            isCrouching = true;
-            // Adjust player height when crouching
-            transform.localScale = new Vector3(transform.localScale.x, crouchingHeight, transform.localScale.z);
+            // Check if there's something above preventing standing up
+            RaycastHit hit;
+            if (!Physics.Raycast(transform.position + Vector3.up * (standingHeight - 0.1f), Vector3.up, out hit, standingCheckDistance))
+            {
+                isCrouching = true;
+                // Adjust player height when crouching
+                playerCollider.height = crouchingHeight;
+            }
         }
-        else if (Input.GetKeyUp(KeyCode.LeftControl))
+        else if (Input.GetKeyUp(KeyCode.LeftControl) && isCrouching)
         {
-            isCrouching = false;
             // Restore original player height when standing up
-            transform.localScale = new Vector3(transform.localScale.x, standingHeight, transform.localScale.z);
+            isCrouching = false;
+            playerCollider.height = standingHeight;
         }
 
         // Handle movement
