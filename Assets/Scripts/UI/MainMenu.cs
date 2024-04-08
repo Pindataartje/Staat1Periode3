@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    void LoadNextScene()
+    public void StartNewGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MapXander");
     }
     public void Quitgame()
     {
