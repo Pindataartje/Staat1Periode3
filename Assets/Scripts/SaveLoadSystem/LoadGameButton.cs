@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadGameButton : MonoBehaviour
 {
-    // Naam van de scène om te laden
-    public string gameSceneName = "JeSpelScèneNaamHier";
+    // Naam van de spelscène om te laden
+    public string gameSceneName = ""; // Update this with the name of your new scene
 
     // Functie om het opgeslagen spel en de scène te laden
     public void LoadSavedGameAndScene()
@@ -19,23 +19,30 @@ public class LoadGameButton : MonoBehaviour
             Debug.Log("Geladen speler data: Positie=" + savedGameData.position + ", Rotatie=" + savedGameData.rotation);
 
             // Laad de spelscène asynchroon
-            SceneManager.LoadSceneAsync(gameSceneName).completed += (operation) =>
+            if (!string.IsNullOrEmpty(gameSceneName))
             {
-                // Stel de positie en rotatie van de speler in op basis van de geladen data
-                GameObject player = GameObject.FindGameObjectWithTag("Player");
-                if (player != null)
+                SceneManager.LoadSceneAsync(gameSceneName).completed += (operation) =>
                 {
-                    player.transform.position = savedGameData.position;
-                    player.transform.rotation = savedGameData.rotation;
-                }
-                else
-                {
-                    Debug.LogError("LoadGameButton: Speler GameObject niet gevonden in de geladen scène.");
-                }
+                    // Stel de positie en rotatie van de speler in op basis van de geladen data
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    if (player != null)
+                    {
+                        player.transform.position = savedGameData.position;
+                        player.transform.rotation = savedGameData.rotation;
+                    }
+                    else
+                    {
+                        Debug.LogError("LoadGameButton: Speler GameObject niet gevonden in de geladen scène.");
+                    }
 
-                // Print succesbericht naar console
-                Debug.Log("Spel succesvol geladen.");
-            };
+                    // Print succesbericht naar console
+                    Debug.Log("Spel succesvol geladen.");
+                };
+            }
+            else
+            {
+                Debug.LogError("LoadGameButton: Spelscène naam niet ingesteld.");
+            }
         }
         else
         {
