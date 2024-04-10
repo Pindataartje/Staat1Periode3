@@ -30,7 +30,7 @@ public class Checkpoint : MonoBehaviour
     void SavePlayerData(Vector3 position, Quaternion rotation)
     {
         Debug.Log("Saving player data: Position=" + position + ", Rotation=" + rotation);
-        // Ensure that SaveLoadManager is not null before attempting to save player data
+        // Zorg ervoor dat SaveLoadManager niet null is voordat u probeert spelergegevens op te slaan
         if (saveLoadManager != null)
         {
             // Create GameData object

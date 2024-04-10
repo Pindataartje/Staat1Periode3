@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LoadGameButton : MonoBehaviour
 {
     // Naam van de spelscène om te laden
-    public string gameSceneName = "MapTest3-25-24"; // Update this with the name of your new scene
+    public string gameSceneName = "MapTest3-25-24"; 
 
     // Functie om het opgeslagen spel en de scène te laden
     public void LoadSavedGameAndScene()

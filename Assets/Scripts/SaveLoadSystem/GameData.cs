@@ -8,10 +8,10 @@ public class GameData
     // Player rotation
     public Quaternion rotation;
 
-    // Constructor to initialize player data
+    // Constructor om spelergegevens te initialiseren
     public GameData(Vector3 playerPosition, Quaternion playerRotation)
     {
-        position = playerPosition; // Assigning method parameter to class field without 'this.'
-        rotation = playerRotation; // Assigning method parameter to class field without 'this.'
+        position = playerPosition; 
+        rotation = playerRotation; 
     }
 }
