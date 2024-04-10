@@ -48899,6 +48899,8 @@ MonoBehaviour:
   objective2: {fileID: 1830394473}
   objective3: {fileID: 786020521}
   trigger1: {fileID: 1959546501}
+  leftDoorOpen: {fileID: 1157567642}
+  rightDoorOpen: {fileID: 864072228}
 --- !u!114 &1630217663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58991,7 +58993,7 @@ GameObject:
   - component: {fileID: 1959546502}
   - component: {fileID: 1959546506}
   m_Layer: 0
-  m_Name: objectiveswitch 1-2
+  m_Name: ObjectiveSwitch 1-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

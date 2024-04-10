@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class Flip : MonoBehaviour
 {
-    public float maxDistance = 5f; // Maximum distance allowed for flipping
+    public float maxDistance = 2f; // Maximum distance allowed for flipping
     private Animator mAnimator;
     private Transform playerTransform;
     public GameObject objective2;
     public GameObject objective3;
     public GameObject trigger1;
+    public GameObject leftDoorOpen;
+    public GameObject rightDoorOpen;
 
     void Start()
     {
@@ -29,6 +31,8 @@ public class Flip : MonoBehaviour
                 objective2.SetActive(false);
                 objective3.SetActive(true);
                 trigger1.SetActive(false);
+                Destroy(leftDoorOpen);
+                Destroy(rightDoorOpen);
             }
         }
     }
