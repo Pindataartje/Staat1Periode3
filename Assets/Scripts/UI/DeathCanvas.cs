@@ -4,42 +4,41 @@ using UnityEngine;
 
 public class DeathCanvas : MonoBehaviour
 {
-    public GameObject retryCanvas;
-    public AudioSource audioToMute;
-    public bool cursorLocked = true;
+    public GameObject winCanvas;
+    public GameObject deathCanvas;
 
-    void Start()
+    private void Start()
     {
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Ensure both canvases are initially turned off
+        winCanvas.SetActive(false);
+        deathCanvas.SetActive(false);
     }
 
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Death")
+        Debug.Log("Collision detected with: " + other.gameObject.name); // Add this line
+        if (other.CompareTag("Win"))
         {
-            retryCanvas.SetActive(true);
-            GetComponent<AudioSource>().Play();
-
-            audioToMute.volume = 0f;
-
-            // Unlock and show the cursor
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
-            // Set the cursorLocked flag to false
-            cursorLocked = false;
+            ActivateWinCanvas();
+        }
+        // Other collision handling code...
+        if (other.CompareTag("Death"))
+        {
+            ActivateDeathCanvas();
         }
     }
 
-    void Update()
+    private void ActivateWinCanvas()
     {
-        // Check if the cursor should be locked and hidden
-        if (cursorLocked)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        // Turn off the death canvas (if it's active) and activate the win canvas
+        deathCanvas.SetActive(false);
+        winCanvas.SetActive(true);
+    }
+
+    private void ActivateDeathCanvas()
+    {
+        // Turn off the win canvas (if it's active) and activate the death canvas
+        winCanvas.SetActive(false);
+        deathCanvas.SetActive(true);
     }
 }

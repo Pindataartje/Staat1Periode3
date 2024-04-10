@@ -9,6 +9,8 @@ TagManager:
   - Gang
   - Kamer
   - Enemy
+  - Death
+  - Win
   layers:
   - Default
   - TransparentFX
