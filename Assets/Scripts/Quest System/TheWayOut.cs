@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class TheWayOut : MonoBehaviour
 {
-    public GameObject doorOpen;
+    public GameObject leftDoorOpen;
+    public GameObject rightDoorOpen;
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(doorOpen);
+        Destroy(leftDoorOpen);
+        Destroy(rightDoorOpen);
     }
 
 }
