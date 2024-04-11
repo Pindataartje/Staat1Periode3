@@ -1,28 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DeathCanvas : MonoBehaviour
 {
     public GameObject winCanvas;
     public GameObject deathCanvas;
+    public PauseMenuScript pauseMenuScript; // Reference to PauseMenuScript
 
     private void Start()
     {
         // Ensure both canvases are initially turned off
         winCanvas.SetActive(false);
         deathCanvas.SetActive(false);
+        pauseMenuScript.HideAndLockCursor(); // Ensure cursor is initially hidden and locked
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision detected with: " + other.gameObject.name); // Add this line
-        if (other.CompareTag("Win"))
+        Debug.Log("Collision detected with: " + collision.gameObject.name); // Add this line
+        if (collision.collider.CompareTag("Win"))
         {
             ActivateWinCanvas();
         }
         // Other collision handling code...
-        if (other.CompareTag("Death"))
+        if (collision.collider.CompareTag("Death"))
         {
             ActivateDeathCanvas();
         }
@@ -33,6 +33,7 @@ public class DeathCanvas : MonoBehaviour
         // Turn off the death canvas (if it's active) and activate the win canvas
         deathCanvas.SetActive(false);
         winCanvas.SetActive(true);
+        pauseMenuScript.ShowAndUnlockCursor(); // Show and unlock cursor when canvas is activated
     }
 
     private void ActivateDeathCanvas()
@@ -40,5 +41,6 @@ public class DeathCanvas : MonoBehaviour
         // Turn off the win canvas (if it's active) and activate the death canvas
         winCanvas.SetActive(false);
         deathCanvas.SetActive(true);
+        pauseMenuScript.ShowAndUnlockCursor(); // Show and unlock cursor when canvas is activated
     }
 }

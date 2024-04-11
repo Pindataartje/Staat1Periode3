@@ -10,14 +10,10 @@ public class PauseMenuScript : MonoBehaviour
     public string mainMenuSceneName = "MainMenu";
 
     void Start()
-    {      
+    {
         pauseMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
-        if (!isPaused)
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        HideAndLockCursor(); // Ensure cursor is initially hidden and locked
     }
 
     void Update()
@@ -35,13 +31,11 @@ public class PauseMenuScript : MonoBehaviour
         Time.timeScale = isPaused ? 0f : 1f;
         if (isPaused)
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            ShowAndUnlockCursor(); // Show and unlock cursor when paused
         }
         else
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            HideAndLockCursor(); // Hide and lock cursor when resumed
         }
     }
 
@@ -52,11 +46,24 @@ public class PauseMenuScript : MonoBehaviour
         isPaused = false;
         pauseMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        HideAndLockCursor(); // Hide and lock cursor when game resumes
     }
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    // Method to show and unlock cursor
+    public void ShowAndUnlockCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    // Method to hide and lock cursor
+    public void HideAndLockCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
