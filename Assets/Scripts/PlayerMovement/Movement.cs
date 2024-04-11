@@ -6,55 +6,49 @@ public class Movement : MonoBehaviour
     public float hor;
     public Vector3 lopen;
     public float speed;
-    public float crouchSpeedMultiplier = 0.5f; // Multiplier for crouch speed
-    public bool isCrouching = false; // Flag to track crouch state
+    public float runSpeedMultiplier = 2.0f; // Multiplier for run speed
+    public bool isRunning = false; // Flag to track run state
     public float standingHeight = 1.0f; // Original height of the player
     public float crouchingHeight = 0.5f; // Height of the player when crouching
-    public float standingCheckDistance = 0.2f; // Distance to check for obstacles when standing up
-    private CapsuleCollider playerCollider; // Reference to the player's collider
+    public float maxRunDuration = 10f; // Maximum duration of running in seconds
+    private float currentRunDuration = 0f; // Current duration of running
+    
 
+    // Start is called before the first frame update
     void Start()
     {
-        // Get reference to the player's collider
-        playerCollider = GetComponent<CapsuleCollider>();
-        // Ensure the collider is not null
-        if (playerCollider == null)
-        {
-            Debug.LogError("Player Collider is missing!");
-        }
     }
 
+    // Update is called once per frame
     void Update()
     {
-        // Check for crouch input
-        if (Input.GetKeyDown(KeyCode.LeftControl) && !isCrouching)
+        // Check for run input and sufficient duration
+        if (Input.GetKeyDown(KeyCode.LeftShift) && currentRunDuration < maxRunDuration)
         {
-            // Check if there's something above preventing standing up
-            RaycastHit hit;
-            if (!Physics.Raycast(transform.position + Vector3.up * (standingHeight - 0.1f), Vector3.up, out hit, standingCheckDistance))
-            {
-                isCrouching = true;
-                // Adjust player height when crouching
-                playerCollider.height = crouchingHeight;
-            }
+            isRunning = true;
         }
-        else if (Input.GetKeyUp(KeyCode.LeftControl) && isCrouching)
+        else if (Input.GetKeyUp(KeyCode.LeftShift) || currentRunDuration >= maxRunDuration)
         {
-            // Restore original player height when standing up
-            isCrouching = false;
-            playerCollider.height = standingHeight;
+            isRunning = false;
         }
+
+        // Update current run duration
+        currentRunDuration += isRunning ? Time.deltaTime : 0f;
+        currentRunDuration = Mathf.Clamp(currentRunDuration, 0f, maxRunDuration);
 
         // Handle movement
         hor = Input.GetAxis("Horizontal");
         vert = Input.GetAxis("Vertical");
 
-        // Apply crouching speed multiplier if crouching
-        float currentSpeed = isCrouching ? speed * crouchSpeedMultiplier : speed;
+        // Apply speed modifiers
+        float currentSpeed = speed;
+
+        
+     
 
         lopen.x = hor;
         lopen.z = vert;
 
         transform.Translate(lopen * currentSpeed * Time.deltaTime);
-    }
+        }
 }
