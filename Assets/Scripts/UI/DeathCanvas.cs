@@ -5,6 +5,7 @@ public class DeathCanvas : MonoBehaviour
     public GameObject winCanvas;
     public GameObject deathCanvas;
     public PauseMenuScript pauseMenuScript; // Reference to PauseMenuScript
+    public GameObject enemyObject; // Reference to the enemy object
 
     private void Start()
     {
@@ -20,6 +21,10 @@ public class DeathCanvas : MonoBehaviour
         if (collision.collider.CompareTag("Win"))
         {
             ActivateWinCanvas();
+            if (enemyObject != null) // Check if enemy object is assigned
+            {
+                Destroy(enemyObject); // Destroy the enemy object
+            }
         }
         // Other collision handling code...
         if (collision.collider.CompareTag("Death"))
