@@ -77387,6 +77387,7 @@ Transform:
   - {fileID: 1540947165}
   - {fileID: 1498648077}
   - {fileID: 705172557}
+  - {fileID: 2101247533}
   - {fileID: 1419169623}
   - {fileID: 1038811630}
   - {fileID: 1903081633}
@@ -79681,6 +79682,98 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4093371013474665873, guid: 1ca9cfaf7ec500d42bee35482c10a23b,
     type: 3}
   m_PrefabInstance: {fileID: 8751227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2101247532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2047476448}
+    m_Modifications:
+    - target: {fileID: 4074523921776082965, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: lightSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074523921776082965, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: enemyTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924795821824914978, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: enemyTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.572292
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 163.0062
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 191.08214
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7593695235460848048, guid: e994b8dc3d00f1e49955a64946099310,
+        type: 3}
+      propertyPath: m_Name
+      value: HotelMuurRecht (81)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7983393049318039036, guid: e994b8dc3d00f1e49955a64946099310, type: 3}
+    - {fileID: 4074523921776082965, guid: e994b8dc3d00f1e49955a64946099310, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 7837583159174667463, guid: e994b8dc3d00f1e49955a64946099310, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e994b8dc3d00f1e49955a64946099310, type: 3}
+--- !u!4 &2101247533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7073441124954145546, guid: e994b8dc3d00f1e49955a64946099310,
+    type: 3}
+  m_PrefabInstance: {fileID: 2101247532}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2101647444
 PrefabInstance:
