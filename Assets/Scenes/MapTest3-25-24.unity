@@ -8918,6 +8918,7 @@ MonoBehaviour:
   winCanvas: {fileID: 1340738331}
   deathCanvas: {fileID: 1549370935}
   pauseMenuScript: {fileID: 2011777326}
+  enemyObject: {fileID: 1833824548}
 --- !u!82 &305538982
 AudioSource:
   m_ObjectHideFlags: 0
